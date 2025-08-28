@@ -92,10 +92,10 @@ for (String key : envUsers.keySet()) {
 }
 if (!usersToInsert.isEmpty()) {
     insert usersToInsert;
-    System.debug('Create user: ' + u.Username);
     
     // Assign a password to each created user
     for (User u : usersToInsert) {
+        System.debug('Create user: ' + u.Username);
         System.setPassword(u.Id, 'MyNPCPassword123!');
         System.debug('Password set for user: ' + u.Username);
     }
